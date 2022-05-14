@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SrezApp.Pages.RegPage">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column" Margin="40,10,40,10">
+            <StackLayout>
+                <Entry BackgroundColor="#e8e8e8"
+                   Placeholder="Логин" 
+                   Margin="0,35,0,0" 
+                   HeightRequest="60"
+                   x:Name="ELogin"/>
+
+                <Entry BackgroundColor="#e8e8e8"
+                   Placeholder="FIO" 
+                   Margin="0,35,0,0"
+                   HeightRequest="60"
+                   x:Name="EFIO"/>
+
+                <Entry BackgroundColor="#e8e8e8"
+                   Placeholder="Пароль" 
+                   Margin="0, 35,0,0" 
+                   HeightRequest="60"
+                   x:Name="EPassword"
+                   IsPassword="True"/>
+                
+
+            </StackLayout>
+
+            <StackLayout Margin="0,204,0,0">
+                
+                <Button x:Name="BtnReg" 
+                    Clicked="BtnReg_Clicked"
+                    Text="Зарегистрироваться" 
+                    CornerRadius="200"
+                    FontSize="9.6"
+                    WidthRequest="149"
+                    HeightRequest="49"
+                    BackgroundColor="#00b2ff"
+                    TextColor="White"/>
+            </StackLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

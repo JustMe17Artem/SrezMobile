@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SrezApp.Pages.ProjectPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Center" Margin="0, 15, 0, 0" >
+
+                <Entry Placeholder="Название проекта" 
+                           PlaceholderColor="Gray"  
+                           x:Name="EName" 
+                           Text="{Binding Name}"
+                           TextColor="Black"
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="60"
+                           Margin="40, 7, 40, 0"/>
+
+                <Editor HeightRequest="200"
+                           Placeholder="Описание"
+                           x:Name="EDDescription" 
+                           Text="{Binding Description}"
+                           TextColor="Black"
+                           Margin="40,15, 40, 0"
+                           BackgroundColor="#e8e8e8"/>
+                
+                <DatePicker x:Name="DPDate"
+                            HeightRequest="100"
+                            Date="{Binding Date}"/>
+
+                <FlexLayout Direction="RowReverse"  JustifyContent="Center" HorizontalOptions="Center">
+                    <Button Text="Добавить" 
+                        CornerRadius="200" 
+                        BackgroundColor="#00b2ff" 
+                        TextColor="White" 
+                        x:Name="BtnAddProject" 
+                        Clicked="BtnAddProject_Clicked"
+                        HeightRequest="49"
+                        WidthRequest="149"
+                        FontSize="9.6"
+                        Margin="0, 30, 11, 0"/>
+
+
+
+                </FlexLayout>
+
+                <FlexLayout Direction="RowReverse"  JustifyContent="Center" HorizontalOptions="Center">
+                    <Button Text="Удалить" 
+                        CornerRadius="200" 
+                        BackgroundColor="#00b2ff" 
+                        TextColor="White" 
+                        x:Name="BtnDeleteProject" 
+                        Clicked="BtnDeleteProject_Clicked"
+                        HeightRequest="49"
+                        WidthRequest="149"
+                        FontSize="9.6"
+                        Margin="0, 30, 11, 0"/>
+
+                    <Button Text="Редактировать" 
+                        CornerRadius="200" 
+                        BackgroundColor="#00b2ff" 
+                        TextColor="White" 
+                        x:Name="BtnEdit" 
+                        Clicked="BtnEdit_Clicked"
+                        HeightRequest="49"
+                        WidthRequest="149"
+                        FontSize="9.6"
+                        Margin="0, 30, 10, 0"/>
+
+
+                </FlexLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
