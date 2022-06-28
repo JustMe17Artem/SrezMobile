@@ -65,9 +65,13 @@ namespace SrezApp.Pages
         {
             if (await DisplayAlert(" ", $"Вы хотите изменить {currentProject.Name}?", "Изменить", "Отмена"))
             {
-                if (!String.IsNullOrEmpty(currentProject.Name))
+                if (!String.IsNullOrEmpty(currentProject.Name) && DateIsCorrect())
                 {
                     App.Db.SaveProject(currentProject);
+                }
+                else
+                {
+                    await DisplayAlert("Некорректная дата", $"Введите корректную дату", "Ладно");
                 }
                 await Navigation.PushAsync(new ProjectsPage(currentUser));
             }
